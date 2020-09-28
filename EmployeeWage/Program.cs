@@ -24,7 +24,7 @@ namespace EmployeeWage
             EmployeeWorkingDay workingDay = new EmployeeWorkingDay();
             workingDay.NumberOfWorkingDay();
             // UC6
-            EmployeeMaxHour maxHour = new EmployeeMaxHour();
+            EmployeeMaxDay maxHour = new EmployeeMaxDay();
             maxHour.NumberOfMaxWorkingDay();
         }
     }
