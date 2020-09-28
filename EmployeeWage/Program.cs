@@ -21,6 +21,8 @@ namespace EmployeeWage
             EmployeePartTimeSwitch partTimeSwitch = new EmployeePartTimeSwitch();
             partTimeSwitch.AddPartTimeEmployee();
             // UC5
+            EmployeeWorkingDay workingDay = new EmployeeWorkingDay();
+            workingDay.NumberOfWorkingDay();
         }
     }
 }
