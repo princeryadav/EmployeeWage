@@ -9,6 +9,8 @@ namespace EmployeeWage
             Console.WriteLine("Welcome to Employee Wage Computation Program.");
             EmployeePresOrAbs employeePresOrAbs = new EmployeePresOrAbs();
             employeePresOrAbs.IsEmployeePresentOrAbsent();
+            EmployeeWageCal wageCal = new EmployeeWageCal();
+            wageCal.CalculateEmpWage();
         }
     }
 }
