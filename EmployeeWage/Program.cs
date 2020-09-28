@@ -11,6 +11,8 @@ namespace EmployeeWage
             employeePresOrAbs.IsEmployeePresentOrAbsent();
             EmployeeWageCal wageCal = new EmployeeWageCal();
             wageCal.CalculateEmpWage();
+            EmployeePartTime partTime = new EmployeePartTime();
+            partTime.AddPartTimeEmployee();
         }
     }
 }
