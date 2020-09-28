@@ -13,6 +13,8 @@ namespace EmployeeWage
             wageCal.CalculateEmpWage();
             EmployeePartTime partTime = new EmployeePartTime();
             partTime.AddPartTimeEmployee();
+            EmployeePartTimeSwitch partTimeSwitch = new EmployeePartTimeSwitch();
+            partTimeSwitch.AddPartTimeEmployee();
         }
     }
 }
