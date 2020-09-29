@@ -6,6 +6,7 @@ namespace EmployeeWage
 {
     class EmployeeMaxDay
     {
+        // All constant.
         private const int IS_PART_TIME = 1;
         private const int IS_FULL_TIME = 2;
         private const int EMP_RATE_PER_HOUR = 20;
@@ -14,10 +15,12 @@ namespace EmployeeWage
 
         public void NumberOfMaxWorkingDay()
         {
+            // All Local.
             int empHrs;
             int totalNumOfWage = 0;
             int totalNumOfHrs = 0;
             int totalNumOfDay = 0;
+            // Check for condition.
             while (totalNumOfHrs <= MAX_NUM_OF_WORKING_HOUR && totalNumOfDay < MAX_NUM_OF_WORKING_DAY)
             {
                 totalNumOfDay++;
