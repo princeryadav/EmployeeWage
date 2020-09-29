@@ -6,12 +6,14 @@ namespace EmployeeWage
 {
     class EmployeeWorkingDay
     {
+        // All constant.
         private const int IS_PART_TIME = 1;
         private const int IS_FULL_TIME = 2;
         private const int EMP_RATE_PER_HOUR = 20;
         private const int NUM_OF_WORKING_DAY = 20;
         public void NumberOfWorkingDay()
         {
+            // All local.
             int empHrs;
             int totalNumOfWage = 0;
             for (int day = 0; day < NUM_OF_WORKING_DAY; day++)
