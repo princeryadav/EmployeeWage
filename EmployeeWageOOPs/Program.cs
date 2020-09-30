@@ -7,10 +7,11 @@ namespace EmployeeWageOOPs
         static void Main(string[] args)
         {
             Console.WriteLine("Wellcome to Emp computation!");
-            CompanyWagArray wagArray = new CompanyWagArray();
-            wagArray.AddCompanyEmpWage("DMART", 20,20,100);
-            wagArray.AddCompanyEmpWage("TATA", 20, 20, 100);
-            wagArray.ComputeEmpWage();
+            EmpWagBuilder wageList = new EmpWagBuilder();
+            wageList.AddCompanyEmpWage("DMART", 20,20,100);
+            wageList.AddCompanyEmpWage("TATA", 20, 20, 100);
+            wageList.ComputeEmpWage();
+            Console.WriteLine("{0}", wageList.GetTotalWage("DMART"));
         }
     }
 }

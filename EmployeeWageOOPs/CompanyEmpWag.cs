@@ -4,6 +4,13 @@ using System.Text;
 
 namespace EmployeeWageOOPs
 {
+    public interface IComputeEmpWage
+    {
+        public void AddCompanyEmpWage(string company, int empRatePerHour, int numOfWorkingDay, int maxHourPerMonth);
+        public void ComputeEmpWage();
+        public int GetTotalWage(string comany);
+    }
+
     public class CompanyEmpWag
     {
         public string company;
