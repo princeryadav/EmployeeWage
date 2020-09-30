@@ -4,24 +4,27 @@ namespace EmployeeWageOOPs
 {
     class Program
     {
-        // Constant
+        // All constant.
         private const int IS_PART_TIME = 1;
         private const int IS_FULL_TIME = 2;
-        private const int EMP_RATE_PER_HOUR = 20;
-        private const int NUM_OF_WORKING_DAY = 20;
         static void Main(string[] args)
         {
             Console.WriteLine("Wellcome to Emp computation!");
-            ComputeEmpWage();
+            ComputeEmpWage("DMART", 20, 20, 100);
+            ComputeEmpWage("JIO De dana dan", 20, 20, 100);
         }
 
-        public static int ComputeEmpWage() 
+        public static int ComputeEmpWage(string company, int empRatePerHour, int numOfWorkingDay, int maxHourPerMonth)
         {
-            // Local
+            // All Local.
             int empHrs;
             int totalNumOfWage = 0;
-            for (int day = 0; day < NUM_OF_WORKING_DAY; day++)
+            int totalNumOfHrs = 0;
+            int totalNumOfDay = 0;
+            // Check for condition.
+            while (totalNumOfHrs <= maxHourPerMonth && totalNumOfDay < numOfWorkingDay)
             {
+                totalNumOfDay++;
                 Random random = new Random();
                 int empCheck = random.Next(0, 3);
                 switch (empCheck)
@@ -36,11 +39,10 @@ namespace EmployeeWageOOPs
                         empHrs = 0;
                         break;
                 }
-                int empWage = empHrs * EMP_RATE_PER_HOUR;
-                totalNumOfWage += empWage;
-                Console.WriteLine("Emp Wage : {0}", empWage);
+                totalNumOfHrs += empHrs;
             }
-            Console.WriteLine("Total num of Wage : {0}", totalNumOfWage);
+            totalNumOfWage = totalNumOfHrs * empRatePerHour;
+            Console.WriteLine("Total num of Wage for company : {0} is {1}", company, totalNumOfWage);
             return totalNumOfWage;
         }
     }
