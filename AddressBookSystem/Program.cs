@@ -13,6 +13,10 @@ namespace AddressBookSystem
             bookBuilder.AddContacts("Sam", "Yadav", "Manorma", "Thane", "MH", 400607, "808082801");
             bookBuilder.AddContacts("Curon", "Yadav", "Manorma", "Thane", "MH", 400607, "808082801");
             bookBuilder.DisplayContacts();
+            bookBuilder.EditContacts("Sam", "Shem", "MU", "London", "Eng", 14512, "808082801");
+            bookBuilder.EditContacts("Indal", "Shem", "MU", "London", "Eng", 14512, "808082801");
+            bookBuilder.EditContacts("Prince", "Shem", "MU", "London", "Eng", 14512, "808082801");
+            bookBuilder.DisplayContacts();
         }
     }
 }

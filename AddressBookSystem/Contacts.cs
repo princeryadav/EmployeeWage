@@ -19,5 +19,6 @@ namespace AddressBookSystem
     {
         public void AddContacts(string firstName, string lastName, string address, string city, string state, int zip, string phoneNumber);
         public void DisplayContacts();
+        public void EditContacts(string firstName, string lastName, string address, string city, string state, int zip, string phoneNumber);
     }
 }

@@ -42,5 +42,17 @@ namespace AddressBookSystem
             tableHelper.PrintLine();
             Console.ReadLine();
         }
+
+        public void EditContacts(string firstName, string lastName, string address, string city, string state, int zip, string phoneNumber)
+        {
+            Contacts contacts = this.table[firstName];
+            contacts.LastName = lastName;
+            contacts.Address = address;
+            contacts.City = city;
+            contacts.State = state;
+            contacts.Zip = zip;
+            contacts.PhoneNumber = phoneNumber;
+            this.table[firstName] = contacts;
+        }
     }
 }
