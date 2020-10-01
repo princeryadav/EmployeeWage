@@ -7,27 +7,40 @@ namespace AddressBookSystem
 {
     public class AddressBookBuilder : IContacts
     {
-        private Contacts contacts;
+        private Dictionary<string, Contacts> table;
         public AddressBookBuilder()
         {
-            this.contacts = new Contacts();
+            this.table = new Dictionary<string, Contacts>();
         }
         public void AddContacts(string firstName, string lastName, string address, string city, string state, int zip, string phoneNumber)
         {
-            this.contacts.FirstName = firstName;
-            this.contacts.LastName = lastName;
-            this.contacts.Address = address;
-            this.contacts.City = city;
-            this.contacts.State = state;
-            this.contacts.Zip = zip;
-            this.contacts.PhoneNumber = phoneNumber;
+            Contacts contacts = new Contacts();
+            contacts.FirstName = firstName;
+            contacts.LastName = lastName;
+            contacts.Address = address;
+            contacts.City = city;
+            contacts.State = state;
+            contacts.Zip = zip;
+            contacts.PhoneNumber = phoneNumber;
+            table.Add(contacts.FirstName, contacts);
         }
 
         public void DisplayContacts()
         {
-            Console.WriteLine("{0} {1} {2} {3} {4} {5} {6}", this.contacts.FirstName, this.contacts.LastName, this.contacts.Address,
-                this.contacts.City, this.contacts.State,this.contacts.Zip,this.contacts.PhoneNumber);
-
+            int id = 1;
+            TableHelper tableHelper = new TableHelper();
+            Console.Clear();
+            tableHelper.PrintLine();
+            tableHelper.PrintRow("Id","FName", "LName", "Adrs", "City", "State", "Zip", "Phone");
+            tableHelper.PrintLine();
+            foreach (var item in table)
+            {
+                tableHelper.PrintRow(id.ToString(),item.Value.FirstName, item.Value.LastName, item.Value.Address,
+                item.Value.City, item.Value.State, item.Value.Zip.ToString(), item.Value.PhoneNumber);
+                id++;
+            }
+            tableHelper.PrintLine();
+            Console.ReadLine();
         }
     }
 }

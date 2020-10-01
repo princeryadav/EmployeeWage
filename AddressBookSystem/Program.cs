@@ -8,7 +8,10 @@ namespace AddressBookSystem
         {
             Console.WriteLine("Welcome To Address Book Program!");
             AddressBookBuilder bookBuilder = new AddressBookBuilder();
-            bookBuilder.AddContacts("Prince","Yadav","Manorma","Thane","MH",400607,"808082801");
+            bookBuilder.AddContacts("Prince", "Yadav", "Manorma", "Thane", "MH", 400607, "808082801");
+            bookBuilder.AddContacts("Indal", "Yadav", "Manorma", "Thane", "MH", 400607, "808082801");
+            bookBuilder.AddContacts("Sam", "Yadav", "Manorma", "Thane", "MH", 400607, "808082801");
+            bookBuilder.AddContacts("Curon", "Yadav", "Manorma", "Thane", "MH", 400607, "808082801");
             bookBuilder.DisplayContacts();
         }
     }
