@@ -17,6 +17,8 @@ namespace AddressBookSystem
             bookBuilder.EditContacts("Indal", "Shem", "MU", "London", "Eng", 14512, "808082801");
             bookBuilder.EditContacts("Prince", "Shem", "MU", "London", "Eng", 14512, "808082801");
             bookBuilder.DisplayContacts();
+            bookBuilder.DeleteContacts("Prince");
+            bookBuilder.DisplayContacts();
         }
     }
 }

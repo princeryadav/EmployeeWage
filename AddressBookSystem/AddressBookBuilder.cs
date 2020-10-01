@@ -25,6 +25,11 @@ namespace AddressBookSystem
             table.Add(contacts.FirstName, contacts);
         }
 
+        public void DeleteContacts(string firstName)
+        {
+            this.table.Remove(firstName);
+        }
+
         public void DisplayContacts()
         {
             int id = 1;
