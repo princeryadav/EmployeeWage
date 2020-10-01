@@ -67,5 +67,13 @@ namespace EmployeeWageOOPs
         {
             return this.keyValues[comany].totalEmpWage;
         }
+
+        public void GetTotalWageForAllCompany() 
+        {
+            foreach (var item in this.keyValues)
+            {
+                Console.WriteLine("Total wage of {0} is {1}", item.Key, item.Value.totalEmpWage);
+            }
+        }
     }
 }

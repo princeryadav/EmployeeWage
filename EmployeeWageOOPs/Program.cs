@@ -12,6 +12,7 @@ namespace EmployeeWageOOPs
             wageList.AddCompanyEmpWage("TATA", 20, 20, 100);
             wageList.ComputeEmpWage();
             Console.WriteLine("{0}", wageList.GetTotalWage("DMART"));
+            wageList.GetTotalWageForAllCompany();
         }
     }
 }
