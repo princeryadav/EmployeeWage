@@ -1,0 +1,8 @@
+﻿2020-10-04 19:22:53.3844|DEBUG|NLogDemo.NLog|Debug unsuccessfull : Sum()
+2020-10-04 19:22:53.6634|ERROR|NLogDemo.NLog|Expecting null values
+2020-10-04 19:22:53.6806|WARN|NLogDemo.NLog|a and b should not be eauql to 0
+2020-10-04 19:22:53.6855|DEBUG|NLogDemo.NLog|Debug Successfull : Sum()
+2020-10-04 19:22:53.6855|INFO|NLogDemo.NLog|Sum method passed, Result00
+2020-10-04 19:25:00.6329|DEBUG|NLogDemo.NLog|Debug unsuccessfull : Sum()
+2020-10-04 19:25:00.7217|ERROR|NLogDemo.NLog|Expecting null values
+2020-10-04 19:25:00.7327|WARN|NLogDemo.NLog|a and b should not be eauql to 0
